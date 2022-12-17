@@ -1,0 +1,35 @@
+<div class="container my-5">
+  <form #form1="ngForm" (ngSubmit)="ClaimSearch(membersname.cliamId,isChecked)" >
+    <table class="table">
+      <thead>
+        <tr>
+          <th>MemberID</th>
+          <th>FirstName</th>
+          <th>LastName</th>
+          <th>CliamId</th>
+          <th>Assigned Physician</th>
+          <th>Submitted Date</th>
+          <th></th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>{{membersname.memberId}}</td>
+          <td>{{membersname.firstName}}</td>
+          <td>{{membersname.lastName}}</td>
+          <td>{{membersname.cliamId}}</td>
+          <td>{{membersname.physicianName}}</td>
+          <td>{{membersname.dateOfBirth}}</td>
+          <td>
+            <input type="checkbox" name="checked" id="checked" [(ngModel)]="isChecked" (change)="doSomething();">
+          </td>
+          <td>
+            <button type="submit" class="btn btn-primary">Sumbit Claim</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </form>
+</div>
+

@@ -1,0 +1,35 @@
+
+<div class="container my-5">
+  <h1 class="mb-3">Sumbit Claim</h1>
+  <div class="row">
+    <div class="col-6">
+      <form #form="ngForm" (ngSubmit)="sumbitClaims(claimsId)">
+        <div class="form-group mb-3">
+          <label for="claimType" class="form-label">Claim Type</label>
+           <select class="form-select" name="claimType" id="claimType" [(ngModel)]="claims.claimType">
+            <option value="Vision">Vision</option>
+            <option value="Dental">Dental</option>
+            <option value="Medical">Medical</option>
+          </select>
+        </div>
+        <div class="form-group mb-3">
+          <label for="amount" class="form-label">Claim Amount</label>
+          <input type="number" class="form-control" name="amount"
+           id="amount" placeholder="Enter your Claim Amount" [(ngModel)]="claims.claim_Amount" required>
+        </div>
+        <div class="form-group mb-3">
+          <label for="remarks" class="form-label">Remarks</label>
+          <input type="text" class="form-control" id="remarks"
+          name="remarks" placeholder="Enter your remarks" [(ngModel)]="claims.remarks" required>
+        </div>
+        <div class="form-group mb-3">
+          <label for="date" class="form-label">Claim Date</label>
+          <input type="date" class="form-control" id="date"
+          name="date" [(ngModel)]="claims.claim_Date" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Register</button>
+      </form>
+    </div>
+  </div>
+
+</div>

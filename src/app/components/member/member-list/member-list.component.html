@@ -1,0 +1,28 @@
+<div class="container my-5">
+  <h1 class="mb-3">Member List</h1>
+  <table class="table" *ngIf="members && members.length>0">
+    <thead>
+      <tr>
+        <th>MemberID</th>
+        <th>FirstName</th>
+        <th>LastName</th>
+        <th>CliamId</th>
+        <th>Assigned Physician</th>
+        <th>Submitted Date</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let member of members">
+        <td>{{member.memberId}}</td>
+        <td>{{member.firstName}}</td>
+        <td>{{member.lastName}}</td>
+        <td>{{member.cliamId}}</td>
+        <td>{{member.physicianName}}</td>
+        <td>{{member.dateOfBirth}}</td>
+      </tr>
+    </tbody>
+  </table>
+  <p *ngIf="!members || members.length<=0">No Members Found</p>
+  <button type="submit"  class="btn btn-primary" (click)="NavigateMemberSearch()">Sumbit Claim</button>
+</div>
+

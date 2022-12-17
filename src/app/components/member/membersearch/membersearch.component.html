@@ -1,0 +1,38 @@
+
+<div class="container my-5">
+  <h1 class="mb-3">Add New Employee</h1>
+  <div class="row">
+    <div class="col-6">
+      <form #form="ngForm" (ngSubmit)="searchMember(membersearch)" >
+        <div class="input-group my-5">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="memberid">Member ID</span>
+          </div>
+    <input type="number" name="memberid" class="form-control" [(ngModel)]="membersearch.memberId" placeholder="Enter MemberId">
+        </div>
+        <div class="input-group my-5">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="name">Member Name</span>
+          </div>
+          <input type="text" class="form-control"  placeholder="Enter your First Name" name="fname" [(ngModel)]="membersearch.fname">
+          <input type="text" class="form-control"  placeholder="Enter your Last Name" name="lname" [(ngModel)]="membersearch.lname">
+        </div>
+        <div class="input-group my-5">
+          <div class="input-group-prepend">
+            <span class="input-group-text"  id="physicianname">Physician Name</span>
+          </div>
+          <input type="text" class="form-control" name="physicianname" [(ngModel)]="membersearch.physicianName" placeholder="Enter Physician Name">
+        </div>
+        <button type="submit" class="btn btn-primary">Search</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+ <app-search-name [membersname]="member" *ngIf="temp==2"></app-search-name>
+<app-search-id [members]="member" *ngIf="temp==1"></app-search-id>
+
+<app-search-physician [memberlist]="memberlist" *ngIf="temp==3"></app-search-physician>
+
+

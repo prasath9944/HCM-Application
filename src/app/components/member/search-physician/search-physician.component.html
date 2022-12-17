@@ -1,0 +1,35 @@
+
+<div class="container my-5">
+  <form #form1="ngForm" (ngSubmit)="ClaimSearch(claimid,isChecked)" >
+    <table class="table">
+      <thead>
+        <tr>
+          <th>MemberID</th>
+          <th>FirstName</th>
+          <th>LastName</th>
+          <th>CliamId</th>
+          <th>Assigned Physician</th>
+          <th>Submitted Date</th>
+          <th></th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let index of memberlist;index as i">
+          <td>{{memberlist[i].memberId}}</td>
+          <td>{{memberlist[i].firstName}}</td>
+          <td>{{memberlist[i].lastName}}</td>
+          <td>{{memberlist[i].cliamId}}</td>
+          <td>{{memberlist[i].physicianName}}</td>
+          <td>{{memberlist[i].dateOfBirth}}</td>
+          <td>
+            <input type="checkbox" name="checked" id="checked" (change)="onCheckboxChange($event,memberlist[i].cliamId)">
+          </td>
+          <td>
+            <button type="submit" class="btn btn-primary">Sumbit Claim</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </form>
+</div>

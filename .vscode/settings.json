@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/168ec814-5e1c-480a-8a4b-67869cc8cb49/AppServices/subscriptions/168ec814-5e1c-480a-8a4b-67869cc8cb49/resourceGroups/prasathhcm/providers/Microsoft.Web/sites/HCMPortalprasath",
+    "appService.deploySubpath": "dist"
+}
